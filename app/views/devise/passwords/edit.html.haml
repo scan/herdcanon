@@ -1,0 +1,7 @@
+%h2 Change your password
+= simple_form_for resource, as: resource_name, url: password_path(resource_name), html: { method: :put, class: 'form-horizontal' } do |f|
+  = devise_error_messages!
+  = f.input :reset_password_token, as: :hidden
+  = f.input :password, label: "New password", autofocus: true, autocomplete: :off
+  = f.button :submit
+= render "devise/shared/links"

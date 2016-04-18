@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
   scope :public, -> { where(:published, true) }
 
   valitates :user, presence: true
-  validates :title, presence: true, length { minimum: 10, maximum: 180 }
+  validates :title, presence: true, length: { minimum: 10, maximum: 180 }
   validates :published, inclusion: { in: [true, false] }
 
   def name

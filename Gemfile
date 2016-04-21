@@ -31,6 +31,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'thin'
   gem 'ffaker'
+  gem 'database_cleaner'
 end
 
 group :development do

@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Role, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:role) { build(:role) }
+    
+  it 'has a valid role' do
+    expect(role).to be_valid
+  end
 end

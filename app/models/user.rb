@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :lockable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_and_belongs_to_many :users, join_table: :users_roles
   has_many :posts, dependent: :destroy
 
   validates :display_name, presence: true, length: { maximum: 80 }
